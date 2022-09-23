@@ -1,0 +1,730 @@
+* {
+    font-family: 'RocknRoll One', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 60vh 15vh 100vh 325vh 75vh 35vh 30vh;
+    grid-template-areas:
+        "imgheader imgheader"
+        "navbar navbar"
+        "bali bali"
+        "populaire articles"
+        "partenaires partenaires"
+        "infos infos"
+        "footer footer";
+}
+
+h1 {
+    font-size: 3rem;
+    color: white;
+}
+
+.auteur-date {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    grid-area: auteur;
+}
+
+.auteur p {
+    font-style: italic;
+    font-size: small;
+}
+
+.btnlireart {
+    width: 10em;
+    height: 6ex;
+    background-color: #f2f7ba;
+    border-radius: 10px;
+    color: #2b80b9;
+    cursor: pointer;
+    text-decoration: none;
+    grid-area: btn-lire;
+}
+
+.btnlireart:hover {
+    background-color: #2b80b9;
+    color: #f2f7ba;
+}
+
+/********* Header *********/
+.logo img {
+    color: white;
+}
+
+.imgheader {
+    grid-area: imgheader;
+}
+
+.container {
+    text-align: center;
+    background: url("/images/beach.jpg")
+        /*linear-gradient(rgba(204, 192, 126, 0.299), rgba(0, 0, 0, 0.7))*/
+    ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
+
+#hamburger {
+    display: none;
+}
+
+#navbarTitle {
+    display: none;
+}
+
+/********* Barre de navigation *********/
+#navigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80vw;
+}
+
+nav {
+    background-color: #f2f7ba;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    grid-area: navbar;
+    width: 100vw;
+}
+
+#navigation a {
+    list-style-type: none;
+    text-decoration: none;
+    color: #2b80b9;
+}
+
+#navigation a:hover {
+    color: #6cadc2;
+}
+
+/********* Bali *********/
+.bali {
+    grid-area: bali;
+    display: flex;
+    flex-direction: column;
+}
+
+.bloctxt {
+    background-color: #2b80b9;
+    border-radius: 10%;
+    margin-bottom: 25px;
+    margin-left: 90px;
+    display: grid;
+    grid-template-columns: 20vw;
+    grid-template-rows: 10vh 8vh 8vh 15vh 10vh 10vh;
+    grid-template-areas:
+        "picto"
+        "une"
+        "bali"
+        "para"
+        "auteur"
+        "btn-lire";
+    justify-items: center;
+}
+
+.bloctxt i {
+    grid-area: picto;
+    margin-top: 20px;
+}
+
+.imgbali {
+    text-align: center;
+    background: url("/images/bali.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    color: white;
+}
+
+.visubali {
+    width: 100vw;
+}
+
+.une {
+    grid-area: une;
+    border-bottom: #f2f7ba 2px solid;
+    line-height: 1.5;
+    align-self: center;
+}
+
+.titrebali {
+    grid-area: bali;
+}
+
+.para {
+    grid-area: para;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-weight: lighter;
+}
+
+/********* Les + populaires *********/
+.populaire {
+    grid-area: populaire;
+    background-color: #2b80b9;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.populaire i {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.txtpopulaire h2 {
+    border-bottom: #f2f7ba 2px solid;
+    margin-bottom: 10px;
+}
+
+.numnote {
+    font-size: 1.3em;
+    display: flex;
+    align-items: center;
+}
+
+.numnote i {
+    margin-left: 130px;
+}
+
+.lieu {
+    font-size: 1.7em;
+    text-align: center;
+}
+
+.dest-pays {
+    width: 28vw;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5px;
+    border-width: 2px;
+    border-style: dashed;
+    box-sizing: border-box;
+    border-color: #f2f7ba;
+}
+
+.redac {
+    width: 2.5vw;
+    border-radius: 50%;
+}
+
+.visudest {
+    width: 20vw;
+    border: #f2f7ba solid 2px;
+}
+
+.populaire .btnlireart {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/********* Les articles *********/
+.articles {
+    grid-area: articles;
+    margin-left: 40px;
+    margin-right: 40px;
+    align-self: center;
+}
+
+.derniersarticles {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 7vh 6vh 18vh 6vh 1vh;
+    grid-template-areas:
+        "time time time"
+        "articles articles articles"
+        "mont syd rio"
+        "btn-art btn-art btn-art"
+        "ligne ligne ligne";
+    justify-items: center;
+    text-align: center;
+    row-gap: 10px;
+}
+
+.derniersarticles i {
+    grid-area: time;
+    color: #2b80b9;
+}
+
+.auteur-date {
+    font-style: italic;
+    font-size: smaller;
+    display: flex;
+    justify-content: space-between;
+}
+
+.derniersarticles h2 {
+    grid-area: articles;
+    color: #2b80b9;
+    border-bottom: #f2f7ba 3px solid;
+    text-align: center;
+}
+
+.mont {
+    grid-area: mont;
+    height: 18vh;
+}
+
+.syd {
+    grid-area: syd;
+    height: 18vh;
+}
+
+.img-rio {
+    grid-area: rio;
+    height: 18vh;
+}
+
+.btnlirearticle {
+    width: 10em;
+    height: 6ex;
+    background-color: #f2f7ba;
+    border-radius: 10px;
+    color: #2b80b9;
+    cursor: pointer;
+    text-decoration: none;
+    grid-area: btn-art;
+}
+
+.line-hor hr {
+    border-top: #2b80b9 solid 2.5px;
+    grid-area: ligne;
+}
+
+.decouvertepays h2 {
+    color: #2b80b9;
+    border-bottom: #f2f7ba 3px solid;
+    margin-bottom: 10px;
+}
+
+.dest-pays .auteur-date i {
+    color: white;
+    margin-left: 15px;
+    margin-right: 5px;
+}
+
+.articles .auteur-date i {
+    color: #2b80b9;
+    margin-left: 15px;
+    margin-right: 5px;
+}
+.p {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.montreal {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 80%;
+    text-align: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.sydney {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 80%;
+    text-align: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.rio {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 80%;
+    text-align: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.visupays {
+    width: 40vw;
+    border: #f2f7ba solid 3px;
+    margin-top: 10px;
+}
+
+/********* Les partenaires *********/
+.partenaires {
+    grid-area: partenaires;
+}
+
+.containerpart {
+    text-align: center;
+    background: url("/images/plane.jpg")
+        /*linear-gradient(rgba(204, 192, 126, 0.299), rgba(0, 0, 0, 0.7))*/
+    ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.containerpart i {
+    color: #2b80b9;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.nospart h2 {
+    color: #2b80b9;
+    border-bottom: #f2f7ba 3px solid;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.promo {
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+/********* Les infos *********/
+.infos {
+    grid-area: infos;
+    background-color: #2b80b9;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logoga {
+    width: 15vw;
+    margin-top: 10px;
+}
+
+.logoga:hover {
+    transform: scale(1.2);
+}
+
+.txtga h3 {
+    color: white;
+}
+
+.gridairline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/********* Footer *********/
+.footer {
+    grid-area: footer;
+    background-color: #f2f7ba;
+    color: #2b80b9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h3 .footer {
+    margin-bottom: 30px;
+}
+
+.socialmedia-item i {
+    color: #2b80b9;
+    margin: 8px;
+}
+
+.socialmedia-item i:hover {
+    color: white;
+}
+
+/* ******** media queries téléphones + tablettes ************** */
+
+@media screen and (max-width: 1024px) {
+    body {
+        display: grid;
+        grid-template-columns: 50vw 50vw;
+        grid-template-rows: 60vh 100vh 1fr 45vh 28vh 18vh;
+        grid-template-areas:
+            "imgheader imgheader"
+            "bali bali"
+            "populaire articles"
+            "partenaires partenaires"
+            "infos infos"
+            "footer footer";
+    }
+    
+    nav {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        width: 100vw;
+        opacity: 0.85;
+        padding: 20px;
+        height: auto;
+    }
+
+    #navigation {
+        display: flex;
+        margin-top: 20px;
+    }
+
+    #hamburger {
+        display: block;
+        align-self: flex-start;
+        color: #2b80b9;
+    }
+    
+    #navbarTitle {
+        display: block;
+    }
+
+    #hamburgerAndTitle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90vw;
+    } 
+
+    #hamburgerAndTitle h2 {
+        margin: 0 auto;
+        color: #2b80b9;
+    }
+
+    .imgheader {
+        grid-area: imgheader;
+        width: 100vw;
+    }
+
+    .bali {
+        grid-area: bali;
+    }
+
+    .bloctxt {
+        margin-bottom: 100px;
+        margin-left: 160px;
+        display: grid;
+        grid-template-columns: 40vw;
+        grid-template-rows: 10vh 6vh 8vh 18vh 8vh 8vh;
+        grid-template-areas:
+            "picto"
+            "une"
+            "bali"
+            "para"
+            "auteur"
+            "btn-lire";
+        justify-items: center;
+    }
+
+    .populaire {
+        grid-area: populaire;
+    }
+
+    .dest-pays {
+        width: 48vw;
+    }
+
+    .visudest {
+        width: 35vw;
+    }
+
+    .articles {
+        grid-area: articles;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .derniersarticles {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+    }
+
+    .derniersarticles h2 {
+        grid-area: articles;
+    }
+    
+    .derniersarticles i {
+        grid-area: time;
+    }
+
+    .derniersarticles .btnlirearticle {
+        grid-area: btn-art;
+    }
+
+    .mont {
+        grid-area: mont;
+    }
+    
+    .syd {
+        grid-area: syd;
+    }
+    
+    .img-rio {
+        grid-area: rio;
+    }
+
+    .barrelat {
+        grid-area: ligne;
+    }
+
+    .derniersarticles img {
+        width: 40vw;
+    }
+
+    .partenaires {
+        grid-area: partenaires;
+    }
+
+    .containerpart {
+        height: 45vh;
+    }
+
+    .infos {
+        grid-area: infos;
+    }
+
+    .logoga {
+        width: 25vw;
+    }
+
+    .footer {
+        grid-area: footer;
+    }
+
+    
+}
+
+/* ************** media queries téléphones ************** */
+
+@media screen and (max-width: 576px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    body {
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-rows: 50vh 90vh 420vh 1fr 50vh 90vh 18vh;
+        grid-template-areas:
+            "imgheader"
+            "bali"
+            "articles"
+            "populaire"
+            "partenaires"
+            "infos"
+            "footer";
+    }
+
+    #navigation {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bloctxt {
+        width: 70vw;
+        margin-bottom: 50px;
+        margin-left: 50px;
+        display: grid;
+        grid-template-columns: 70vw;
+        grid-template-rows: 10vh 6vh 6vh 20vh 10vh 8vh;
+        grid-template-areas:
+            "picto"
+            "une"
+            "bali"
+            "para"
+            "auteur"
+            "btn-lire";
+        justify-items: center;
+    }
+
+    .derniersarticles {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+    }
+
+    .derniersarticles img {
+        height: auto;
+        width: 80vw;
+    }
+
+    .visupays {
+        width: 80vw;
+    }
+
+    .dest-pays {
+        width: 85vw;
+    }
+
+    .visudest {
+        width: 84vw;
+    }
+
+    .auteur-date {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .redac {
+        width: 10vw;
+    }
+
+    .containerpart {
+        height: 60vh;
+    }
+
+    .infos {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .logoga {
+        width: 20vh;
+    }
+
+    .txtga {
+        font-size: 1.5em;
+    }
+
+    h3 .footer {
+        font-size: 1.3em;
+        margin-top: 20px;
+    }
+}
