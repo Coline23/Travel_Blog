@@ -63,7 +63,7 @@ h1 {
 
 .container {
     text-align: center;
-    background: url("/images/beach.jpg")
+    background: url("./images/beach.jpg")
         /*linear-gradient(rgba(204, 192, 126, 0.299), rgba(0, 0, 0, 0.7))*/
     ;
     background-repeat: no-repeat;
@@ -147,7 +147,7 @@ nav {
 
 .imgbali {
     text-align: center;
-    background: url("/images/bali.jpg");
+    background: url("./images/bali.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -381,7 +381,7 @@ nav {
 
 .containerpart {
     text-align: center;
-    background: url("/images/plane.jpg")
+    background: url("./images/plane.jpg")
         /*linear-gradient(rgba(204, 192, 126, 0.299), rgba(0, 0, 0, 0.7))*/
     ;
     background-repeat: no-repeat;
